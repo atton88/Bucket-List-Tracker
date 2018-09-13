@@ -1,0 +1,35 @@
+<div class="uk-container">
+  <div class="">
+
+    <h1 class="uk-flex uk-flex-center">Bucket List Tracker!</h1>
+
+    <h2 class="uk-flex uk-flex-center">Add to your bucket list and keep track of them!</h2>
+  </div>
+
+  <div>
+    <div class="">
+      {{#each list}}
+      <div>
+        <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
+          <h3 class="uk-card-title">Item Number: {{number}}</h3>
+          <p>{{item}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+
+    <div class="uk-flex uk-flex-center">
+      <div>
+        <h2 class="">Add a bucket list item</h2>
+      </div>
+        <form id="createForm">
+          <div class="uk-inline">
+            <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
+            <input class="uk-input" type="text" id="newText" name="name">
+          </div>
+          <button type="submit" class="uk-button uk-button-primary">Add Item</button>
+        </form>
+    </div>
+  </div>
+</div>
