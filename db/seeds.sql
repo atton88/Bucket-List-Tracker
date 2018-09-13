@@ -1,7 +1,7 @@
-USE bucketList_db;
+USE i9kvfxhip01a6ak0;
 
-INSERT INTO bucketList (name) VALUES ('See the northern lights');
-INSERT INTO bucketList (name) VALUES ('Swim in bioluminescence');
-INSERT INTO bucketList (name) VALUES ('Fly a plane');
-INSERT INTO bucketList (name) VALUES ('Dive the Great Barrier Reef');
-INSERT INTO bucketList (name) VALUES ('Become a developer');
+INSERT INTO bucketList (item) VALUES ('See the northern lights');
+INSERT INTO bucketList (item) VALUES ('Swim in bioluminescence');
+INSERT INTO bucketList (item) VALUES ('Fly a plane');
+INSERT INTO bucketList (item) VALUES ('Dive the Great Barrier Reef');
+INSERT INTO bucketList (item) VALUES ('Become a developer');
