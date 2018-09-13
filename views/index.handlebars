@@ -11,12 +11,7 @@
       <p>to do</p>
       {{#each list}}
         {{#unless completed}}
-          <div>
-            <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
-              <h3 class="uk-card-title">Item Number: {{number}}</h3>
-              <p id={{number}}> {{item}}</p>
-            </div>
-          </div>
+          {{> lists/list-block completed=true}}
         {{/unless}}
       {{/each}}
     </div>
@@ -39,12 +34,7 @@
       <p>complete</p>
       {{#each list}}
         {{#if completed}}
-          <div>
-            <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
-              <h3 class="uk-card-title">Item Number: {{number}}</h3>
-              <p> {{item}}</p>
-            </div>
-          </div>
+          {{> lists/list-block completed=false}}
         {{/if}}
       {{/each}}
     </div>

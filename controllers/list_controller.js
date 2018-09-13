@@ -34,9 +34,8 @@ router.post("/api/list", function(req, res){
 router.put("/api/list/:id", function(req, res) {
 
     // MySQL condition to find specific id
-    var condition = "id = " + req.params.id;
-    
-    list.toggle(value, condition, function(result) {
+    console.log(req.body.completed)
+    list.toggle(req.params.id, req.body.completed, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();

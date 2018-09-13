@@ -1,0 +1,13 @@
+<div>
+    <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
+        <h3 class="uk-card-title">{{id}}.</h3>
+        <p> {{item}}</p>
+        <button class="toggleBtn uk-button uk-button-primary" data-id="{{id}}" data-completed="{{completed}}">
+            {{#if completed}}Complete!{{else}}Uncomplete!{{/if}}
+        </button>
+        <button class="deleteBtn uk-button uk-button-primary" data-id="{{id}}">
+            DELETE
+        </button>
+        <hr>
+    </div>
+</div>

@@ -31,8 +31,8 @@ var orm = {
             cb(result)
         })
     },
-    update: function(tableName, value, condition, cb) {
-        var queryString = "UPDATE " + tableName + " SET completed = '" + value + "' WHERE ('" + condition + "')"
+    update: function(tableName, id, data, cb) {
+        var queryString = "UPDATE " + tableName + " SET completed = '" + data + "' WHERE (id = '" + id + "')"
         console.log(queryString)
         connection.query(queryString, function(err, result) {
             if (err) throw err;

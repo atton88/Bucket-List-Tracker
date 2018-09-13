@@ -21,8 +21,8 @@ var list = {
         });
     }, 
     // toggles the completed state of list item
-    toggle: function(value, condition, cb) {
-        orm.update("bucketlist", condition, function(res) {
+    toggle: function(id, data, cb) {
+        orm.update("bucketlist", id, data, function(res) {
             cb(res);
         });
     }}
