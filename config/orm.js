@@ -1,13 +1,3 @@
-//create the methods that will execute the necessary MySQL commands 
-//in the controllers. These are the methods you will need to use in 
-//order to retrieve and store data in your database.
-
-// selectAll()
-
-//insertOne()
-
-//updateOne()
-
 // Import MySQL connection information
 var connection = require("./connection.js");
 
@@ -39,6 +29,12 @@ var orm = {
             console.log("UPDATE results:")
             console.log(result);
             cb(result)
+        })
+    },
+    delete: function(tableName, id, cb){
+        connection.query("DELETE FROM " + tableName + " WHERE id = " + id, function(err, result) {
+            if (err) throw err;
+            cb(result);
         })
     }}
 

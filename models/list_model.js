@@ -1,10 +1,6 @@
 // Import ORM functions that connect to the database
 var orm = require("../config/orm.js")
 
-// // create the code that will call the 
-// // ORM functions using burger specific input for the ORM.
-
-// Get all function
 var list = {
 
     // gets information of all entries and sends back to client
@@ -25,6 +21,11 @@ var list = {
         orm.update("bucketlist", id, data, function(res) {
             cb(res);
         });
+    },
+    delete:function(id, cb){
+        orm.delete("bucketlist", id, function(res) {
+            cb(res);
+        })
     }}
 
 

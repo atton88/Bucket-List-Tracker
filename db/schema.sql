@@ -1,7 +1,7 @@
 -- Schema
 
-CREATE DATABASE i9kvfxhip01a6ak0;
-USE i9kvfxhip01a6ak0;
+CREATE DATABASE m4ox5wjfhr14l61i;
+USE m4ox5wjfhr14l61i;
 
 CREATE TABLE bucketList
 (

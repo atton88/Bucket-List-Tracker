@@ -22,9 +22,6 @@ $(function() {
 
   // On click of complete button, send PUT call to server
   $(".toggleBtn").on("click", function(event) {
-    console.log("toggle button test");
-
-    event.preventDefault();
 
     var id = $(this).data("id");
     var newState = {completed: + $(this).data("completed")}; // + changes true value to 1 and false to 0
@@ -40,8 +37,20 @@ $(function() {
     });
   });
 
+  // On click of delete button, send DELETE call to server
   $(".deleteBtn").on("click", function(event) {
-      console.log("delete btn test")
+
+      var id = $(this).data("id");
+
+      $.ajax("/api/list/" + id, {
+        type: "DELETE",
+      }).then(
+        function() {
+          console.log("Deleting item");
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
   })
 
 });
