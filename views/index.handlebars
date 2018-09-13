@@ -8,13 +8,16 @@
 
   <div>
     <div class="">
+      <p>to do</p>
       {{#each list}}
-      <div>
-        <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
-          <h3 class="uk-card-title">Item Number: {{number}}</h3>
-          <p>{{item}}</p>
-        </div>
-      </div>
+        {{#unless completed}}
+          <div>
+            <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
+              <h3 class="uk-card-title">Item Number: {{number}}</h3>
+              <p id={{number}}> {{item}}</p>
+            </div>
+          </div>
+        {{/unless}}
       {{/each}}
     </div>
 
@@ -31,5 +34,20 @@
           <button type="submit" class="uk-button uk-button-primary">Add Item</button>
         </form>
     </div>
+
+    <div class="">
+      <p>complete</p>
+      {{#each list}}
+        {{#if completed}}
+          <div>
+            <div class="uk-card uk-card-small uk-card-secondary uk-card-hover uk-card-body">
+              <h3 class="uk-card-title">Item Number: {{number}}</h3>
+              <p> {{item}}</p>
+            </div>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+
   </div>
 </div>

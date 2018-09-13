@@ -11,7 +11,7 @@
 // Import MySQL connection information
 var connection = require("./connection.js");
 
-// ORM object with CRUD functions that interact with MySQL database
+// ORM object with CRUD functions to interact with MySQL database
 var orm = {
     all: function(tableName, cb) {
         connection.query("SELECT * FROM " + tableName, function(err, result) {
@@ -30,8 +30,17 @@ var orm = {
             console.log(result);
             cb(result)
         })
-    }
-}
+    },
+    update: function(tableName, value, condition, cb) {
+        var queryString = "UPDATE " + tableName + " SET completed = '" + value + "' WHERE ('" + condition + "')"
+        console.log(queryString)
+        connection.query(queryString, function(err, result) {
+            if (err) throw err;
+            console.log("UPDATE results:")
+            console.log(result);
+            cb(result)
+        })
+    }}
 
 
 module.exports = orm;

@@ -7,6 +7,6 @@ CREATE TABLE bucketList
 (
 	id int NOT NULL AUTO_INCREMENT,
 	item varchar(255) NOT NULL,
-	completed BOOLEAN DEFAULT false,
+	completed BOOLEAN DEFAULT 0,
 	PRIMARY KEY (id)
 );
