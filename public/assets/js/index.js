@@ -15,7 +15,7 @@ $(function() {
       data: newItem
     }).then(function() {
       console.log("Created new list item");
-      // Reload the page to get the updated list
+
       location.reload();
     });
   });
@@ -27,16 +27,15 @@ $(function() {
     event.preventDefault();
 
     var id = $(this).data("id");
-    var newCompleted = $(this).data("completed");
-    var newState = {completed: + newCompleted}; // + changes true value to 1 and falso to 0
+    var newState = {completed: + $(this).data("completed")}; // + changes true value to 1 and false to 0
 
-    // Send the POST request.
+    // Send the PUT request.
     $.ajax("/api/list/" + id, {
       type: "PUT",
       data: newState
     }).then(function() {
       console.log("Updated list item");
-      // Reload the page to get the updated list
+
       location.reload();
     });
   });
