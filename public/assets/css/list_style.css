@@ -1,0 +1,30 @@
+/* body {
+    color: red;
+    background-image: url("../images/1.jpg");
+    background-size: 100%;
+} */
+
+
+  
+  #animatedBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/1.jpg");
+    background-position: 0 0;
+    background-size: cover;
+  /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
+  }
+  
+  @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+      background-position:  0 -10000px;
+    }
+  }
